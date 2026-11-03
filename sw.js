@@ -1,6 +1,6 @@
 // Network first, cache as fallback: updates show up on the next load,
 // and the app still opens when offline.
-const CACHE = 'caller-v1';
+const CACHE = 'caller-v2';
 const FILES = [
   './', 'index.html', 'display.html',
   'css/base.css', 'css/server.css', 'css/display.css',

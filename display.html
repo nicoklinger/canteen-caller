@@ -6,19 +6,33 @@
   <title>Now Serving</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/display.css">
 </head>
 <body>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <header class="welcome">
+    <div class="welcome-text">
+      <h1>Welcome to the <span class="hl">CUED Canteen</span>!</h1>
+      <p>Wait here for your order to be called<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></p>
+    </div>
+    <time class="clock num" id="clock"></time>
+  </header>
+
   <main class="board">
     <section class="now" id="now">
-      <h1 class="label">Now serving</h1>
-      <div class="current num" id="current" data-len="0">–</div>
+      <h2 class="label"><span class="live" aria-hidden="true"></span>Now serving</h2>
+      <div class="current" id="current" data-len="0">–</div>
     </section>
 
     <section class="prev">
       <h2 class="label">Previously called</h2>
-      <ol class="history num" id="history"></ol>
+      <ol class="history" id="history"></ol>
     </section>
   </main>
 
