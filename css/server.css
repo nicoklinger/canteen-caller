@@ -165,3 +165,10 @@ body { min-height: 100%; }
 .toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; }
 .toggle input { width: 18px; height: 18px; accent-color: var(--accent); }
 .settings-actions { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+
+.credit {
+  padding: 8px 16px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
