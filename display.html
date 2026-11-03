@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now Serving</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/display.css">
+</head>
+<body>
+  <main class="board">
+    <section class="now" id="now">
+      <h1 class="label">Now serving</h1>
+      <div class="current num" id="current" data-len="0">–</div>
+    </section>
+
+    <section class="prev">
+      <h2 class="label">Previously called</h2>
+      <ol class="history num" id="history"></ol>
+    </section>
+  </main>
+
+  <div class="typing num" id="typing" hidden></div>
+  <button class="sound-hint" id="sound-hint" hidden>Click anywhere to turn on sound</button>
+
+  <div class="start" id="start">
+    <div class="start-card">
+      <p class="start-title">Customer display</p>
+      <p>Click to start full screen with sound.</p>
+      <p class="start-small">Move this window to the customer screen first.</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/display.js"></script>
+</body>
+</html>

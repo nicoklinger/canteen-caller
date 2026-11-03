@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Caller</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/server.css">
+</head>
+<body>
+  <header class="bar">
+    <h1 class="brand">Order Caller <span>staff</span></h1>
+    <div class="bar-right">
+      <span class="status" id="status"><i></i><b>Display not open</b></span>
+      <button class="btn primary" id="open-display">Open customer display</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel entry">
+      <p class="label">Typing</p>
+      <div class="draft num" id="draft"><span class="placeholder">Type a number, press Enter</span></div>
+
+      <div class="now-row">
+        <div>
+          <p class="label">Now serving</p>
+          <div class="now num" id="current">–</div>
+        </div>
+        <div class="prev">
+          <p class="label">Previously called <small>(click to call again)</small></p>
+          <div class="chips num" id="history"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p class="label">Keypad</p>
+      <div class="pad" id="pad">
+        <span class="numlock"><small>Num<br>Lock</small></span>
+        <button data-act="clear"     class="fn"><b>/</b><small>clear</small></button>
+        <button data-act="repeat"    class="fn"><b>*</b><small>repeat</small></button>
+        <button data-act="undo"      class="fn"><b>−</b><small>undo</small></button>
+        <button data-act="next"      class="fn tall accent"><b>+</b><small>next</small></button>
+        <button data-act="type" data-arg="7">7</button>
+        <button data-act="type" data-arg="8">8</button>
+        <button data-act="type" data-arg="9">9</button>
+        <button data-act="type" data-arg="4">4</button>
+        <button data-act="type" data-arg="5">5</button>
+        <button data-act="type" data-arg="6">6</button>
+        <button data-act="submit"    class="fn tall accent"><b>Enter</b><small>call</small></button>
+        <button data-act="type" data-arg="1">1</button>
+        <button data-act="type" data-arg="2">2</button>
+        <button data-act="type" data-arg="3">3</button>
+        <button data-act="type" data-arg="0" class="wide">0</button>
+        <button data-act="backspace" class="fn"><b>.</b><small>delete</small></button>
+      </div>
+      <p class="hint">Same layout as the USB keypad. Works with NumLock on or off.</p>
+    </section>
+
+    <section class="panel settings">
+      <p class="label">Sound on customer display</p>
+      <label class="toggle"><input type="checkbox" id="chime"> Chime</label>
+      <label class="toggle"><input type="checkbox" id="voice"> Say “Number 42”</label>
+      <div class="settings-actions">
+        <button class="btn" id="test">Test sound</button>
+        <button class="btn danger" id="reset">Clear all numbers</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/server.js"></script>
+</body>
+</html>

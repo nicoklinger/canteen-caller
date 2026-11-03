@@ -1,0 +1,61 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #eceef2;
+  --text: #15181e;
+  --muted: #5d6573;
+  --border: #d9dde4;
+  --accent: #e8590c;
+  --accent-text: #ffffff;
+  --good: #2b8a3e;
+  --bad: #c92a2a;
+  --radius: 14px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111318;
+    --surface: #1b1e25;
+    --surface-2: #262a33;
+    --text: #eef0f4;
+    --muted: #9aa3b2;
+    --border: #323744;
+    --accent: #ff7a2e;
+    --accent-text: #15181e;
+    --good: #51cf66;
+    --bad: #ff6b6b;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0d12;
+  --surface: #151922;
+  --surface-2: #1f2430;
+  --text: #f4f5f8;
+  --muted: #8f98a8;
+  --border: #2a3040;
+  --accent: #ffb020;
+  --accent-text: #0b0d12;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
