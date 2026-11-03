@@ -1,5 +1,7 @@
 # Order Caller
 
+I had Claude Code (Opus 5.5) writing this web-app, under my description, for use of the CUED canteen staff.
+
 A static web app for calling order numbers in a canteen. Staff type a number on
 a USB numeric keypad and a customer screen shows it in large type, with the last
 5 numbers underneath, a chime and a spoken "Number 42".
